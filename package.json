@@ -43,12 +43,12 @@
     "tmp-promise": "^1.0.3",
     "uid-promise": "^1.0.0"
   },
-  "main": "./out/now.js",
+  "main": "./dist/now.js",
   "files": [
-    "out"
+    "dist"
   ],
   "bin": {
-    "now": "./out/now.js"
+    "now": "./dist/now.js"
   },
   "devDependencies": {
     "ava": "^0.20.0",
@@ -64,11 +64,11 @@
     "prettier": "^1.5.2"
   },
   "scripts": {
-    "build": "babel src/ -d out/ && chmod +x out/now.js",
+    "build": "babel src/ -d dist/ && chmod +x dist/now.js",
     "test": "eslint . && flow",
     "prepublish": "yarn run test && yarn run build",
     "lint:staged": "lint-staged",
-    "dev": "yarn run build && ./out/now.js"
+    "dev": "yarn run build && ./dist/now.js"
   },
   "pre-commit": "lint:staged",
   "lint-staged": {
